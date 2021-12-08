@@ -1,0 +1,22 @@
+//试试看限制1的连接数
+//url      = "mysql://root:123456@localhost:3307/prisma_test?connection_limit=2"  
+//url      = "mysql://root:123456@localhost:3307/prisma_test"  
+datasource db {
+    provider = "mysql"
+    url      = "mysql://root:123456@localhost:3307/prisma_test"  
+}
+
+generator client {
+    provider        = "prisma-client-js"
+    binaryTargets   = ["native"]
+    previewFeatures = ["interactiveTransactions"]
+}
+
+model Seat {
+    id        Int     @id @default(autoincrement())
+    claimedBy String?
+    movieId   Int
+    movie     String   
+    version   Int
+    @@map("seat")
+}

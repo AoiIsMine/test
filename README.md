@@ -4,6 +4,8 @@ When the number of connections is small, although there will be errors, it can s
 (on another computer,  connections 5 (CPU is 2) ,can be rolled back without an error.)  
 
 I'm not sure what caused it or whether it can be reproduced on other computers
+
+simple5.js is use knex.js, can rollback 
 ## env
 mysql 8.0(repeatable read)   
 prisma 3.6.0  
